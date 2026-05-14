@@ -40,5 +40,5 @@ This policy defines the rules and procedures for secure remote access to the cor
 
 ## Incident Response
 Report suspected VPN compromise immediately to Security Team:
-- Email: security@company.rw
+- Email: jados2@gmail.com 
 - Phone: Security hotline
