@@ -55,3 +55,11 @@ Source A	                Source B          	What to Correlate
 Firewall denies	          IDS alerts	        Did IDS detect what firewall blocked?
 VPN logs	              User access logs	    Any VPN login without subsequent activity?
 Server logs	              Firewall logs	        Server compromise with external C2?
+
+
+Suspicious Pattern Examples
+Pattern: 10 failed SSH attempts from 203.0.113.50 → then successful login
+Action: Investigate successful login immediately
+
+Pattern: Firewall shows outbound port 4444 to internet → IDS silent
+Action: Check if IDS rules cover that port; manual investigation
