@@ -22,8 +22,24 @@ To ensure timely detection of security incidents through systematic log review o
 ## Step 1: Priority Review (First 15 minutes)
 
 ### Firewall Logs
+Look for:
+
+Denied connections from internal to external (possible C2 communication)
+
+Unusual outbound ports (non-standard ports like 4444, 6667)
+
+Connections to known malicious IPs
+
+Traffic spikes at unusual hours (2 AM - 5 AM)
 
 ### IDS/IPS Alerts (Critical & High)
+Immediate actions:
+
+Note alert ID and source/destination IPs
+
+Check if false positive (document if yes)
+
+If confirmed threat: follow incident response plan
 
 ### Authentication Logs
 ```bash
@@ -31,3 +47,10 @@ To ensure timely detection of security incidents through systematic log review o
 grep "Failed password" /var/log/auth.log | tail -20
 grep "Invalid user" /var/log/auth.log | tail -20
 lastb | head -20  # Failed login attempts
+
+Step 2: Correlation (Next 15 minutes)
+Cross-Reference Checks
+Source A	Source B	What to Correlate
+Firewall denies	IDS alerts	Did IDS detect what firewall blocked?
+VPN logs	User access logs	Any VPN login without subsequent activity?
+Server logs	Firewall logs	Server compromise with external C2?
