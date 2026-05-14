@@ -54,4 +54,4 @@ Source A	                Source B          	What to Correlate
 ------------              -------------       ------------------
 Firewall denies	          IDS alerts	        Did IDS detect what firewall blocked?
 VPN logs	              User access logs	    Any VPN login without subsequent activity?
-Server logs	              Firewall logs	      Server compromise with external C2?
+Server logs	              Firewall logs	        Server compromise with external C2?
