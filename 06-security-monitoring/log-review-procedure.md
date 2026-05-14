@@ -50,7 +50,8 @@ lastb | head -20  # Failed login attempts
 
 Step 2: Correlation (Next 15 minutes)
 Cross-Reference Checks
-Source A	Source B	What to Correlate
-Firewall denies	IDS alerts	Did IDS detect what firewall blocked?
-VPN logs	User access logs	Any VPN login without subsequent activity?
-Server logs	Firewall logs	Server compromise with external C2?
+Source A	                Source B          	What to Correlate
+------------              -------------       ------------------
+Firewall denies	          IDS alerts	        Did IDS detect what firewall blocked?
+VPN logs	                User access logs	  Any VPN login without subsequent activity?
+Server logs	              Firewall logs	      Server compromise with external C2?
